@@ -86,13 +86,14 @@
     <string name="search_icon">Search Icon</string>
     <string name="camera_icon">Camera Icon</string>
     <string name="add_to_cart">Add To Cart</string>
+    <string name="view_product">View</string>
     <string name="see_all">See All</string>
     <string name="_0">0</string>
     <string name="profile">Profile</string>
     <string name="sample_text">Sample Text</string>
     <string name="wallet">Wallet</string>
     <string name="orders">Orders</string>
-    <string name="previous_orders">Previous Orders</string>
+    <string name="my_order">My Orders</string>
     <string name="favourite_list">Favourite List</string>
     <string name="promotions">Promotions</string>
     <string name="settings">Settings</string>

@@ -49,7 +49,7 @@ class FragmentAccount : Fragment(), AccountContract.View {
             val action = FragmentAccountDirections.actionFragmentAccountToFragmentUpdateUserInfo()
             findNavController().navigate(action)
         }
-        binding.previousOder.setOnClickListener {
+        binding.myOrder.setOnClickListener {
             val action = FragmentAccountDirections.actionFragmentAccountToFragmentUnderMaintenance()
             findNavController().navigate(action)
         }

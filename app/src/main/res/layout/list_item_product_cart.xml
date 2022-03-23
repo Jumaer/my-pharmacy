@@ -121,6 +121,18 @@
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDiscountPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            android:padding="3dp"
+            android:text="0.22% OFF"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

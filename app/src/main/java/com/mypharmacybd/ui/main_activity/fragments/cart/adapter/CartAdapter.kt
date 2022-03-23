@@ -17,6 +17,7 @@ import com.mypharmacybd.db.entity.CartEntity
 import com.mypharmacybd.other.Common.getLoadingDrawable
 import com.mypharmacybd.other.Constants
 import com.mypharmacybd.ui.main_activity.fragments.cart.CartContract
+import java.text.DecimalFormat
 
 class CartAdapter(
     private val mView:CartContract.View,
@@ -64,6 +65,19 @@ class CartAdapter(
         holder.tvCartPrice.text = cartEntity.new_price
         holder.edtQuantity.setText(cartEntity.quantity ?: "1")
         holder.tvCartOldPrice.text = cartEntity.price
+
+        //Show Product discount Presents
+        var OldPrice = (cartEntity.price)?.toDouble()
+        var NewPricet = (cartEntity.new_price)?.toDouble()
+        var DiscountPrice = (OldPrice!! - NewPricet!!)
+        var DiscountPersentis = (OldPrice!! / 100!! ) / DiscountPrice
+        val dec = DecimalFormat("#,###.##")
+        if(DiscountPrice > 0){
+            holder.tvDiscountPercentage.text = "${dec.format(DiscountPersentis)} % OFF".toString()
+        }else{
+            holder.tvDiscountPercentage.setBackgroundColor(0xFFffff)
+        }
+
 
         val url = Constants.WEB_BASE_URL + cartEntity.productImage
 
@@ -118,7 +132,7 @@ class CartAdapter(
         val ibIncrement: ImageButton = itemView.findViewById(R.id.ibIncrement)
         val ibDecrement: ImageButton = itemView.findViewById(R.id.ibDecrement)
         val tvUpdateCart: TextView = itemView.findViewById(R.id.tvUpdateCart)
-
+        val tvDiscountPercentage: TextView = itemView.findViewById(R.id.tvDiscountPercentage)
         val ivRemoveItem: ImageView = itemView.findViewById(R.id.ivRemoveItem)
 
     }

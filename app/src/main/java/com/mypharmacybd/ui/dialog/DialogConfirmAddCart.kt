@@ -139,6 +139,7 @@ class DialogConfirmAddCart(private val product: Product) : DialogFragment() {
 
     }
 
+
     companion object {
         const val TAG = "DialogConfirmAddCart"
     }

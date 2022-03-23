@@ -6,6 +6,7 @@ import com.mypharmacybd.network.api.models.APIFailure
 
 interface CategoryDetailsContract {
     interface View{
+
         fun setDataToView(products:Products)
         fun showProgressbar()
         fun hideProgressbar()

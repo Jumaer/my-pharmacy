@@ -5,14 +5,13 @@ object ApiConfig {
 
     const val AUTH_PREFIX = "Bearer "
 
-
     // base url hide for all clients
     private const val liveBaseUrl = "https://apps.piit.us/my-pharmacy/api/v1/"
 
     // base url reference hide from outside this package
     internal const val BASE_URL = liveBaseUrl
 
-    val webBaseUrl = "https://apps.piit.us/my-pharmacy/"
+    const val webBaseUrl = "https://apps.piit.us/my-pharmacy/"
 
     val headerMap:MutableMap<String, String> = mutableMapOf(
         "Accept" to "application/json",

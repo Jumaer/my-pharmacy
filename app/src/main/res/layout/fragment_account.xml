@@ -338,7 +338,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:id="@+id/previousOder"
+            android:id="@+id/myOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackground"
@@ -369,7 +369,7 @@
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/allerta"
                     android:gravity="start|center_vertical"
-                    android:text="@string/previous_orders"
+                    android:text="@string/my_order"
                     android:textColor="@color/color_secondary_text"
                     android:textSize="14sp" />
 

@@ -1,6 +1,7 @@
 package com.mypharmacybd.ui.main_activity.fragments.category_details.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +15,10 @@ import com.mypharmacybd.data_models.Category
 import com.mypharmacybd.data_models.Product
 import com.mypharmacybd.data_models.Products
 import com.mypharmacybd.databinding.FragmentCategoryDetailsBinding
+import com.mypharmacybd.ui.dialog.DialogConfirmAddCart
 import com.mypharmacybd.ui.main_activity.fragments.category_details.CategoryDetailsContract
 import com.mypharmacybd.ui.main_activity.fragments.category_details.adapter.ListProductAdapter
+import com.mypharmacybd.ui.main_activity.fragments.product_details.FragmentProductDetails
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -59,6 +62,7 @@ class FragmentCategoryDetails : Fragment(), CategoryDetailsContract.View {
         binding.topBar.ivBack.setOnClickListener{
             findNavController().popBackStack()
         }
+
 
     }
 

@@ -9,4 +9,6 @@ data class Brand(
     @SerializedName("id") var id:Int,
     @SerializedName("name") var name:String?,
     @SerializedName("slug") var slug:String?
-) : Parcelable
+) : Parcelable {
+
+}

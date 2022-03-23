@@ -37,23 +37,10 @@
             android:fontFamily="@font/allerta"
             android:textColor="@color/color_primary_text"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/tvDiscountPercentage"
             app:layout_constraintStart_toEndOf="@+id/ivCartImage"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvDiscountPercentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/allerta"
-            android:text="-2%"
-            android:textColor="@color/red"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/tvCartType"
@@ -156,6 +143,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDiscountPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="13dp"
+            android:padding="2dp"
+            android:background="@color/pink"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="3dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

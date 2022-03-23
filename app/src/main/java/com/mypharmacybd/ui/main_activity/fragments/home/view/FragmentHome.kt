@@ -97,7 +97,7 @@ class FragmentHome : Fragment(), HomeContract.View {
         }
 
         binding.searchBox.setOnClickListener {
-            val action = FragmentHomeDirections.actionFragmentHomeToFragmentUnderMaintenance()
+            val action = FragmentHomeDirections.actionFragmentHomeToFragmentSearch()
             findNavController().navigate(action)
         }
 
