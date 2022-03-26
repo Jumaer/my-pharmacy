@@ -1,2 +1,2 @@
 # pharmacy_bd
-Pesele set documnetation here
+Please set document here
