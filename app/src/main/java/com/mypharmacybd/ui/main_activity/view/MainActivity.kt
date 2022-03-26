@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import com.mypharmacybd.R
 import com.mypharmacybd.data_models.user.UserResponse
 import com.mypharmacybd.db.entity.CartEntity
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
         // setup bottom navigation
         setupBottomNav()
+        setUpDrawer()
         Log.d(TAG, "onCreate: is called")
 
         presenter.setView(this)
@@ -57,6 +59,16 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         Session.authToken = sessionEntity.accessToken
     }
 
+    private  fun setUpDrawer(){
+        val drawer : NavigationView= findViewById(R.id.navigationView)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+
+        val navController = navHostFragment.navController
+
+        drawer.setupWithNavController(navController)
+
+    }
     private fun setupBottomNav(){
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
         bottomNavigationView.background = null

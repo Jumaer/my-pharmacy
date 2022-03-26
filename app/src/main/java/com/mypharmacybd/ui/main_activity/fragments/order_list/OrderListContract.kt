@@ -10,9 +10,9 @@ interface OrderListContract {
         fun showProgressbar()
         fun hideProgressbar()
 
-        fun setDataToView(orders: OrderData)
+        fun setDataToView(orders: GetOrderResponse)
 
-        fun onCategoryClicked(orders: OrderData)
+        fun onCategoryClicked(orders: GetOrderResponse)
     }
 
     interface Model {

@@ -3,6 +3,7 @@ package com.mypharmacybd.ui.main_activity.fragments.categories.presenter
 import com.mypharmacybd.network.api.models.APIFailure
 import com.mypharmacybd.ui.main_activity.fragments.categories.CategoriesContract
 import com.mypharmacybd.data_models.Categories
+import com.mypharmacybd.data_models.order.GetOrderResponse
 import com.mypharmacybd.data_models.order.get.OrderData
 import com.mypharmacybd.ui.main_activity.fragments.order_list.OrderListContract
 
@@ -20,11 +21,12 @@ class OrderListPresenter(val model: OrderListContract.Model)
         model.getOrders(this)
     }
 
-    override fun onSuccessOrders(oreders: OrderData) {
-        view.setDataToView(oreders)
+
+
+    override fun onSuccessOrders(orders: GetOrderResponse) {
+        view.setDataToView(orders)
         view.hideProgressbar()
     }
-
 
 
     override fun onFailedOrders(apiFailure: APIFailure) {

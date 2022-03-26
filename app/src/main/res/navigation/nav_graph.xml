@@ -207,4 +207,9 @@
             android:id="@+id/action_fragmentCheckout_to_fragmentHome"
             app:destination="@id/fragmentHome" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentOrderList"
+        android:name="com.mypharmacybd.ui.main_activity.fragments.order_list.view.FragmentOrderList"
+        android:label="fragment_order_list"
+        tools:layout="@layout/fragment_order_list" />
 </navigation>
