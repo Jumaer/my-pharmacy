@@ -5,6 +5,7 @@ import com.mypharmacybd.data_models.Products
 import com.mypharmacybd.data_models.address.DistrictResponse
 import com.mypharmacybd.data_models.address.DivisionResponse
 import com.mypharmacybd.data_models.address.UpazilaResponse
+import com.mypharmacybd.data_models.order.GetOrderResponse
 import com.mypharmacybd.data_models.order.PostOrder
 import com.mypharmacybd.data_models.order.PostOrderResponse
 import com.mypharmacybd.data_models.search.SearchResponse
@@ -96,7 +97,7 @@ interface ApiServices {
     @GET("order")
     fun getOrder(
         @HeaderMap headerMap: Map<String, String>
-    ): Call<PostOrderResponse>
+    ): Call<GetOrderResponse>
 
     @GET("search")
     fun searchByProductName(

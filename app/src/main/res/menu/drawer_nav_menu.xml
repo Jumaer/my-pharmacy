@@ -17,6 +17,10 @@
                     android:id="@+id/fragmentCategories"
                     android:icon="@drawable/ic_category"
                     android:title="@string/categories" />
+                <item
+                    android:id="@+id/fragmentOrder"
+                    android:icon="@drawable/ic_category"
+                    android:title="@string/order" />
             </group>
         </menu>
     </item>
