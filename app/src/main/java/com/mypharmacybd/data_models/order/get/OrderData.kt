@@ -6,7 +6,7 @@ import com.mypharmacybd.data_models.order.get.*
 data class OrderData(
 
     @SerializedName("id") var id: Int? = null,
-    @SerializedName("order_number") var orderNumber: String? = null,
+    @SerializedName("order_number ") var orderNumber: String? = null,
     @SerializedName("user_id") var userId: String? = null,
     @SerializedName("name") var name: String? = null,
     @SerializedName("email") var email: String? = null,

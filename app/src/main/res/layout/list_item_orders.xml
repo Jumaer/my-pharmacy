@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
+    android:orientation="vertical"
     android:foreground="?attr/selectableItemBackground">
 
-    <TextView
-        android:id="@+id/tvCategoryName"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/allerta"
-        android:textColor="@color/color_primary_text"
-        android:padding="16dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvOrderNumber"
+            android:fontFamily="@font/allerta"
+            android:textColor="@color/color_primary_text"
+            android:paddingTop="16dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="16dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="Order id:"
+            android:layout_weight=".9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:text="p"
+            android:textColor="#ffff"
+            android:background="#699704"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
 
     <include
         layout="@layout/divider_grey"
@@ -30,4 +50,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCategoryName" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

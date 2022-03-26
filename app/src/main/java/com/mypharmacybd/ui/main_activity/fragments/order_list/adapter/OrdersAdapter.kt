@@ -1,6 +1,7 @@
 package com.mypharmacybd.ui.main_activity.fragments.categories.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,13 +23,14 @@ class OrdersAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.list_item_categories, parent,false)
+                .inflate(R.layout.list_item_orders, parent,false)
         )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val orderData = ordersResponse.data[position]
-        holder.tvCategoryName.text = orderData.name
+        Log.e("Dim"," orderData.orderNumber :"+ orderData.orderNumber)
+        holder.tvCategoryName.text = "Order id ${orderData.orderNumber}"
        // holder.tvCategoryName.setOnClickListener { view.onCategoryClicked(category)}
     }
 
@@ -36,6 +38,6 @@ class OrdersAdapter(
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvCategoryName:TextView = itemView.findViewById(R.id.tvCategoryName)
+        var tvCategoryName:TextView = itemView.findViewById(R.id.tvOrderNumber)
     }
 }
