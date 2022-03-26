@@ -1,4 +1,4 @@
-package com.mypharmacybd.ui.main_activity.fragments.order_list
+package com.mypharmacybd.ui.main_activity.fragments.order_list.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

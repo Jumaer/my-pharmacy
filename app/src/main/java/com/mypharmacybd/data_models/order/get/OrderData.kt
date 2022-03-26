@@ -3,7 +3,7 @@ package com.mypharmacybd.data_models.order.get
 import com.google.gson.annotations.SerializedName
 import com.mypharmacybd.data_models.order.get.*
 
-data class Data(
+data class OrderData(
 
     @SerializedName("id") var id: Int? = null,
     @SerializedName("order_number") var orderNumber: String? = null,

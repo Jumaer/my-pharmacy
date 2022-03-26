@@ -95,7 +95,7 @@ interface ApiServices {
 
 
     @GET("order")
-    fun getOrder(
+    fun getOrders(
         @HeaderMap headerMap: Map<String, String>
     ): Call<GetOrderResponse>
 
