@@ -91,6 +91,13 @@ interface ApiServices {
         @Body postOrder: PostOrder
     ): Call<PostOrderResponse>
 
+
+
+    @GET("order")
+    fun getOrder(
+        @HeaderMap headerMap: Map<String, String>
+    ): Call<PostOrderResponse>
+
     @GET("search")
     fun searchByProductName(
         @HeaderMap headerMap: Map<String, String> = ApiConfig.headerMap,
