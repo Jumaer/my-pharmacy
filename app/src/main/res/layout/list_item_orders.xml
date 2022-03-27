@@ -3,51 +3,101 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
+    android:background="#DDFFFFFF"
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
+    android:layout_marginBottom="10sp"
     android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:weightSum="2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tvOrderNumber"
-            android:fontFamily="@font/allerta"
-            android:textColor="@color/color_primary_text"
-            android:paddingTop="16dp"
-            android:paddingLeft="8dp"
-            android:paddingBottom="16dp"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:text="Order id:"
-            android:layout_weight=".9"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+        android:layout_height="130dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_order_list"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="2">
+
+        <LinearLayout
+
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvOrderNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:fontFamily="@font/allerta"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:text="Order id:"
+                android:textColor="@color/color_primary_text"
+                android:textSize="17dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="8dp"
+                android:text="Status: "
+                android:paddingRight="10dp"
+                android:textColor="@color/color_primary"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCreateDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:fontFamily="@font/allerta"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="Create date: "
+                android:textColor="@color/color_secondary_text"
+                android:textSize="14dp"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
 
         <TextView
-            android:id="@+id/tvStatus"
-            android:text="p"
-            android:textColor="#ffff"
-            android:background="#699704"
-            android:padding="16dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:id="@+id/tvView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/green_round_button"
+            android:paddingTop="13dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="View"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+
     </LinearLayout>
 
-
-    <include
-        layout="@layout/divider_grey"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategoryName" />
+<!--    <include-->
+<!--        layout="@layout/divider_grey"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1px"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvCategoryName" />-->
 </LinearLayout>

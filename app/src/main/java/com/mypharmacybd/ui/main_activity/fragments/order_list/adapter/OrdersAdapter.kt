@@ -30,7 +30,9 @@ class OrdersAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val orderData = ordersResponse.data[position]
         Log.e("Dim"," orderData.orderNumber :"+ orderData.orderNumber)
-        holder.tvCategoryName.text = "Order id ${orderData.orderNumber}"
+        holder.tvCategoryName.text = "Order id#: ${orderData.orderNumber}"
+        holder.tvStatus.text = "Order Status: ${orderData.status}"
+        holder.tvCreateDate.text = "Create Date: ${orderData.date}"
        // holder.tvCategoryName.setOnClickListener { view.onCategoryClicked(category)}
     }
 
@@ -39,5 +41,7 @@ class OrdersAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvCategoryName:TextView = itemView.findViewById(R.id.tvOrderNumber)
+        var tvStatus:TextView = itemView.findViewById(R.id.tvStatus)
+        var tvCreateDate:TextView = itemView.findViewById(R.id.tvCreateDate)
     }
 }

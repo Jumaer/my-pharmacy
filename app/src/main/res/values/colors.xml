@@ -23,6 +23,7 @@
 
     <!-- Login & Registration Activity Color -->
     <color name="text_registration_title">#009688</color>
+    <color name="green">#008F20</color>
     <color name="text_registration_description">#99009687</color>
 
 </resources>
