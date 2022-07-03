@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -29,6 +30,7 @@ import com.mypharmacybd.ui.dialog.DialogLoading
 import com.mypharmacybd.ui.main_activity.fragments.home.HomeContract
 import com.mypharmacybd.ui.main_activity.fragments.home.adaper.AdapterHomeMain
 import com.mypharmacybd.user.Cart
+import com.mypharmacybd.user.Session
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.internal.immutableListOf
 import javax.inject.Inject
@@ -92,6 +94,10 @@ class FragmentHome : Fragment(), HomeContract.View {
         }
 
         binding.uploadPrescription.setOnClickListener {
+            if(Session.authToken.isNullOrEmpty()){
+                Toast.makeText(requireContext(),"Please login or register",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val action = FragmentHomeDirections.actionFragmentHomeToFragmentUploadPrescription()
             findNavController().navigate(action)
         }

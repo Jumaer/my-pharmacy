@@ -12,7 +12,7 @@ interface OrderListContract {
 
         fun setDataToView(orders: GetOrderResponse)
 
-        fun onCategoryClicked(orders: GetOrderResponse)
+        fun onCategoryClicked(orders: OrderData)
     }
 
     interface Model {

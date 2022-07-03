@@ -115,5 +115,13 @@
     <string name="share">Share</string>
     <string name="rate_us">Rate Us</string>
     <string name="place_order">Place Order</string>
+    <string name="details">Prescription Details</string>
+    <string name="requisition_details">Requisition Details</string>
+    <string name="prescription">Prescriptions</string>
+    <string name="buy">Cart</string>
+    <string name="inStock">In Stock</string>
+    <string name="my_order_details">Order Details</string>
+    <string name="deliveryman">Delivery Man Info</string>
+    <string name="payment">Payment Info</string>
 
 </resources>

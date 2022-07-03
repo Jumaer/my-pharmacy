@@ -1,11 +1,14 @@
 package com.mypharmacybd.data_models.order.get
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import com.mypharmacybd.data_models.order.get.*
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class OrderData(
 
-    @SerializedName("id") var id: Int? = null,
+    @SerializedName("id") var id: String? = null,
     @SerializedName("order_number ") var orderNumber: String? = null,
     @SerializedName("user_id") var userId: String? = null,
     @SerializedName("name") var name: String? = null,
@@ -24,4 +27,4 @@ data class OrderData(
     @SerializedName("payment_status") var paymentStatus: String? = null,
     @SerializedName("delivery_man") var deliveryMan: DeliveryMan? = DeliveryMan()
 
-)
+) : Parcelable

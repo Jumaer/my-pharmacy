@@ -50,7 +50,7 @@ class FragmentAccount : Fragment(), AccountContract.View {
             findNavController().navigate(action)
         }
         binding.myOrder.setOnClickListener {
-            val action = FragmentAccountDirections.actionFragmentAccountToFragmentUnderMaintenance()
+            val action = FragmentAccountDirections.actionFragmentAccountToFragmentOrderList()
             findNavController().navigate(action)
         }
 
@@ -63,9 +63,11 @@ class FragmentAccount : Fragment(), AccountContract.View {
             val action = FragmentAccountDirections.actionFragmentAccountToFragmentUnderMaintenance()
             findNavController().navigate(action)
         }
-
+        binding.myOrderPres.setOnClickListener {
+            findNavController().navigate(FragmentAccountDirections.actionFragmentAccountToListOfPrescriptionsFragment())
+        }
         binding.profileSettings.setOnClickListener {
-            val action = FragmentAccountDirections.actionFragmentAccountToFragmentUnderMaintenance()
+            val action = FragmentAccountDirections.actionFragmentAccountToFragmentUpdateUserInfo()
             findNavController().navigate(action)
         }
 
@@ -87,7 +89,10 @@ class FragmentAccount : Fragment(), AccountContract.View {
         }
 
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
     override fun setUserDataToView(userResponse: UserResponse) {
         showProfileLayout()

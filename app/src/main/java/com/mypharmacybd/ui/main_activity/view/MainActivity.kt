@@ -79,9 +79,27 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         bottomNavigationView.setupWithNavController(navController)
 
         findViewById<View>(R.id.menuUploadPrescription).setOnClickListener {
-            Toast.makeText(this, "Clicked", Toast.LENGTH_LONG).show()
+
+            if(Session.authToken.isNullOrEmpty()){
+                Toast.makeText(this,"Please login or register",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             navController.navigate(R.id.fragmentUploadPrescription)
         }
+
+        findViewById<View>(R.id.fragmentAccount).setOnClickListener {
+            navController.navigate(R.id.fragmentAccount)
+        }
+        findViewById<View>(R.id.fragmentCart).setOnClickListener {
+            navController.navigate(R.id.fragmentCart)
+        }
+        findViewById<View>(R.id.fragmentHome).setOnClickListener {
+            navController.navigate(R.id.fragmentHome)
+        }
+        findViewById<View>(R.id.fragmentCategories).setOnClickListener {
+            navController.navigate(R.id.fragmentCategories)
+        }
+
     }
 
     fun closeDrawer(){
@@ -90,7 +108,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
 
     private fun showToast(msg: String) {
-        Toast.makeText(this, "Code : $msg", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, " $msg", Toast.LENGTH_LONG).show()
     }
 
     companion object {

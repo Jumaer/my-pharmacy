@@ -15,7 +15,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class UpdateUserInfoModel(
-    val dbServices: PharmacyDAO,
+    val dbService: PharmacyDAO,
     val apiServices: ApiServices
 ) : UpdateInfoContract.Model {
 
