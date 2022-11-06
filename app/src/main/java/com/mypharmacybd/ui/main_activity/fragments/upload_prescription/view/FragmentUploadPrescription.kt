@@ -54,6 +54,7 @@ class FragmentUploadPrescription : Fragment() {
         }
     }
 
+
     @RequiresApi(Build.VERSION_CODES.R)
     private var galleryResultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
